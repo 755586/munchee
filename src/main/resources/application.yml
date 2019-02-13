@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://localhost:3306/test
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
@@ -12,5 +12,5 @@ spring:
 mybatis:
   #mapper.xml所在位置
   mapper-locations: classpath:mapper/*.xml
-    #实体类所做包
-    type-aliases-package: com.qiu.munchee.entity
+  #实体类所在包
+  type-aliases-package: com.qiu.munchee.entity
